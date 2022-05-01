@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&family=Tapestry&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Radio Canada', sans-serif;
+}
+body {
+  background: #ffffff;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('https://images.pexels.com/photos/87651/earth-blue-planet-globe-planet-87651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #caf0f8;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  input {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    &::placeholder {
+      color: grey;
+      text-transform: capitalize;
+    }
+    @media screen and (max-width: 600px) {
+      width: 75%;
+    }
+  }
+  button {
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      background-color: rgb(37, 37, 51);
+      color: white;
+    }
+    @media screen and (max-width: 600px) {
+      width: 75%;
+    }
+  }
+}
+main {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12px;
+    row-gap: 1rem;
+    margin-bottom: 10rem;
+    @media screen and (max-width: 678px) {
+      display: block;
+    }
+    @media screen and (max-width: 999px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    article {
+      text-align: center;
+      border: 0.5px solid rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      &:hover {
+        height: auto;
+        box-shadow: 0 0 15px rgb(61, 59, 59);
+      }
+      @media screen and (max-width: 999px) {
+        margin-bottom: 2rem;
+      }
+      img {
+        height: 400px;
+        max-height: 70%;
+        width: 100%;
+        min-width: auto;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border: 0.5px solid grey;
+      }
+      h2 {
+        font-family: 'Tapestry', cursive;
+        margin-bottom: 0.25rem;
+        padding-top: 1rem;
+        font-size: 2rem;
+      }
+      .maps {
+        display: inline;
+        color: grey;
+        font-size: 1rem;
+        cursor: pointer;
+        .fa-map {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+.searched {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10rem;
+
+  article {
+    display: flex;
+    flex-direction: row;
+    border: 0.5px solid rgb(56, 54, 54);
+    margin-bottom: 1rem;
+    h2 {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      background: grey;
+      padding: 1rem;
+      height: 100;
+      flex-basis: 10%;
+    }
+    img {
+      width: 60%;
+      min-height: 100%;
+      justify-self: stretch;
+      align-self: stretch;
+    }
+    div {
+      flex-basis: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .maps {
+        color: grey;
+        font-size: 2rem;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 2px 0 15px grey;
+        }
+      }
+    }
+
+    @media screen and (max-width: 999px) {
+      flex-direction: column;
+      h2 {
+        text-orientation: sideways;
+        writing-mode: horizontal-tb;
+        margin-bottom: 1rem;
+      }
+      p {
+        padding: 0.5rem 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+footer {
+  background-color: rgb(37, 37, 51);
+  height: auto;
+  width: 100vw;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.section-error {
+  text-align: center;
+}
